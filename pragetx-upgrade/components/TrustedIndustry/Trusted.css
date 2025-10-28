@@ -1,0 +1,86 @@
+/* Trusted.css (This file replaces the previous custom.css) */
+
+/* ----------------------------------------------------- */
+/* Custom Gradient Classes and Variables */
+/* ----------------------------------------------------- */
+:root {
+  /* Colors */
+  --color-primary-indigo: #3730A3;
+  --color-secondary-sky: #38BDF8;
+
+  /* ADJUSTED DIMENSIONS (Inferred from common UI scale for the image) */
+  --card-width: 380px;      /* Adjusted from 490px */
+  --card-height: 480px;     /* Adjusted from 633px */
+  --button-width: 180px;    /* Adjusted from 254px */
+  --button-height: 50px;    /* Adjusted from 72px */
+  --spacing-100: 70px;      /* Reduced from 100px for a less aggressive look */
+  --spacing-30: 30px;       /* Keep card gap at 30px */
+  --radius-30: 30px;        /* Keep card radius at 30px */
+}
+
+/* 1. AI agent text color gradient */
+.gradient-text-ai {
+  background: linear-gradient(98.25deg, var(--color-primary-indigo) 3.51%, var(--color-secondary-sky) 96.28%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback */
+}
+
+/* 2. Read all blog button background gradient */
+.gradient-button-blog {
+  background: linear-gradient(95.74deg, var(--color-primary-indigo) -29.39%, var(--color-secondary-sky) 114.09%);
+  /* Exact Dimensions from adjusted variables */
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: 12px;
+  /* Hero UI Effect shadow for button (subtle) */
+  box-shadow: 0 4px 12px rgba(55, 48, 163, 0.3); 
+  transition: all 0.3s ease;
+}
+
+.gradient-button-blog:hover {
+  box-shadow: 0 8px 16px rgba(55, 48, 163, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------------------------- */
+/* Custom Sizing and Spacing */
+/* ----------------------------------------------------- */
+
+/* Custom Utility for Section Spacing (100px) */
+.spacing-100 {
+    padding-top: var(--spacing-100);
+    padding-bottom: var(--spacing-100);
+}
+
+.mb-100 {
+    margin-bottom: var(--spacing-100);
+}
+
+/* Custom Card Sizing and Hero UI Effect */
+.card-fixed-size {
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--radius-30);
+}
+
+.card-hero-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hero-effect:hover {
+  transform: translateY(-8px); /* Subtle lift */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+/* ----------------------------------------------------- */
+/* Custom Grid Template for Large Screens (to respect 3-column layout) */
+/* ----------------------------------------------------- */
+@media (min-width: 1200px) { /* Adjusting breakpoint for new card size */
+    .grid-three-fixed {
+        grid-template-columns: var(--card-width) var(--card-width) var(--card-width);
+        justify-content: space-between;
+        gap: var(--spacing-30);
+    }
+}

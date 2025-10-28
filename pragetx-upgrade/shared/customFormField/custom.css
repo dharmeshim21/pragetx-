@@ -1,0 +1,145 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.custom-input-wrapper,
+.custom-file-input-wrapper,
+.custom-select-trigger {
+  background-color: #ffffff1a !important;
+}
+
+.select-value {
+  color: #ffffff !important;
+}
+
+.custom-file-input-innerwrapper svg,
+.custom-input-innerwrapper svg,
+.custom-textarea-innerwrapper svg,
+.custom-select-trigger svg {
+  width: 20px;
+  height: 20px;
+  color: #ffffff !important;
+}
+
+.input-placeholder-white,
+.input-placeholder-white::placeholder {
+  color: #ffffff !important;
+}
+
+.custom-file-input-wrapper {
+  height: 100%;
+  padding: 0.75rem 12px;
+}
+
+.react-tel-input input.form-control {
+  width: 100%;
+  height: 100%;
+  min-height: 56px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  color: #ffffff;
+  padding-left: 58px;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.radio-wrapper {
+  border-color: #000000 !important;
+}
+
+.radio-control {
+  background: #000000 !important;
+}
+
+.custom-checkbox-wrapper::before {
+  border: 2px solid #000000;
+}
+
+.react-tel-input .country-list {
+  border-radius: 20px !important;
+  overflow-x: hidden;
+  min-height: 350px;
+}
+
+.react-tel-input .country-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.react-tel-input .country-list .search-box {
+  width: 250px;
+}
+
+
+
+/* contact-us form feilds UI */
+
+
+.contact-us .custom-input-wrapper,
+.custom-file-input-wrapper,
+.custom-select-trigger {
+  background-color: transparent !important;
+  border-bottom: 2px solid #ffffff1a !important;
+  border-radius: 0 !important;
+}
+
+.contact-us .react-tel-input input.form-control {
+  border-radius: 0 !important;
+  background-color: transparent;
+  border-bottom: 2px solid #ffffff1a !important;
+  padding-left: 40px !important;
+}
+
+.contact-us .react-tel-input .flag-dropdown {
+  background-color: transparent !important;
+  border: transparent !important;
+  border-radius: 0 !important;
+}
+
+.contact-us .input-placeholder-white::placeholder {
+  color: #ffffffbb !important;
+}
+
+.contact-us .select-value {
+  color: #ffffffbb !important;
+}
+
+.contact-us .group[data-has-value=true].text-foreground-500 {
+  color: #ffffff;
+}
+
+/* Override for input fields with values */
+.contact-us .group[data-has-value=true] .group-data-\[has-value\=true\]\:text-default-foreground {
+  color: #ffffff !important;
+  /* Use white text for filled fields */
+}
+
+/* Ensure the class is applied regardless of specificity conflicts */
+.contact-us form .group[data-has-value=true] * .group-data-\[has-value\=true\]\:text-default-foreground {
+  color: #ffffff !important;
+}
+
+.custom-input-wrapper [role="textbox"],
+.custom-input-wrapper [role="spinbutton"],
+.custom-input-wrapper span {
+  color: white !important;
+}

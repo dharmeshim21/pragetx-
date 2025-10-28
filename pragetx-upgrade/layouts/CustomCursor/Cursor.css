@@ -1,0 +1,20 @@
+/* Custom Fist/Grab Icon for the scrollable component area */
+.custom-hand-cursor {
+    /* Use the downloaded image for the resting state (grab) */
+    cursor: url('/homescreen/cursor/image-fist.png') 10 10, grab; 
+    /* The coordinates (10 10) must be adjusted to align the click-point 
+       to the knuckle/center of the image. */
+}
+
+/* Change to the active/grabbing state when the mouse button is pressed down */
+.custom-hand-cursor:active {
+    cursor: url('/homescreen/cursor/image-fist.png') 10 10, grabbing;
+}
+
+/* Use the standard pointer hand when hovering over clickable elements */
+.custom-hand-cursor a,
+.custom-hand-cursor button,
+.custom-hand-cursor [role="button"],
+.custom-hand-cursor div[onClick] {
+    cursor: pointer !important;
+}
