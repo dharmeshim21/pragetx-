@@ -3,53 +3,23 @@ import React, { useState } from 'react';
 import './TechSelector.css';
 import Image from 'next/image';
 
-const techOptions = [
-    {
-        id: 'ml',
-        title: 'Machine Learning',
-        details: 'Custom machine learning algorithms that learn from your data to make predictions, recognize patterns, and improve over time.',
-        keywords: ['Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning'],
-        image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=ML+Image+Placeholder'
-    },
-    {
-        id: 'nlp',
-        title: 'Natural Language Processing',
-        details: 'Enabling computers to understand, interpret, and generate human language for tasks like translation, sentiment analysis, and chatbots.',
-        keywords: ['Text Generation', 'Sentiment Analysis', 'Machine Translation'],
-        image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=NLP+Image+Placeholder'
-    },
-    {
-        id: 'cv',
-        title: 'Computer Vision',
-        details: 'Extracting meaningful information from digital images, videos, and other visual inputs to automate visual tasks.',
-        keywords: ['Object Detection', 'Facial Recognition', 'Image Segmentation'],
-        image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=CV+Image+Placeholder'
-    },
-    {
-        id: 'ai_chatbots',
-        title: 'AI Chatbots',
-        details: 'Intelligent conversational agents that simulate human conversation through voice commands or text chats, powered by AI.',
-        keywords: ['Generative AI', 'Context Awareness', 'Customer Service Bots'],
-        image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=Chatbot+Image+Placeholder'
-    },
-];
 
 const GradientTitle = ({ text }) => {
     return (
-        <h3 className="gradient-text">{text}</h3>
+        <h4 className="gradient-text" >{text}</h4>
     );
 };
 
-const TechSelector = () => {
-    const [selectedId, setSelectedId] = useState('ml');
+const TechSelector = ({ techOptions = [],imagePath = '' }) => {
+    const [selectedId, setSelectedId] = useState('1');
     const selectedOption = techOptions.find(opt => opt.id === selectedId);
 
     return (
         <div className="container px-4 sm:px-6 md:px-8 pb-0">
-            <div className="tech-selector-container mt-[70px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+            <div className="tech-selector-container mt-[70px]  flex flex-col lg:flex-row   justify-between gap-10 lg:gap-16 my-box1">
 
                 {/* --- LEFT PANEL --- */}
-                <div className="selection-panel flex flex-col w-full lg:w-[480px]">
+                <div className="selection-panel flex flex-col w-full lg:w-[480px] ">
                     {techOptions.map((option) => (
                         <div
                             key={option.id}
@@ -68,7 +38,7 @@ const TechSelector = () => {
                                     <p className="details-text text-[#374151] font-semibold text-[17px]">
                                         {option.details}
                                     </p>
-                                    <div className="keywords flex flex-wrap gap-x-2 gap-y-1">
+                                    {option.keywords && <div className="keywords flex flex-wrap gap-x-2 gap-y-1">
                                         {option.keywords.map((keyword, index) => (
                                             <span
                                                 key={keyword}
@@ -77,7 +47,7 @@ const TechSelector = () => {
                                                 {keyword}
                                             </span>
                                         ))}
-                                    </div>
+                                    </div>}
                                 </div>
                             </div>
                         </div>
@@ -86,14 +56,20 @@ const TechSelector = () => {
 
                 {/* --- RIGHT IMAGE --- */}
                 <div className="flex justify-center w-full lg:w-auto">
-                    <div className="h-[375px] w-[420px] relative rounded-[20px] overflow-hidden">
-                        <Image
-                            src="/images/services/Machine Learning.png"
-                            alt="Hero Image"
-                            width={480}
-                            height={390}
-                            className="object-cover w-full h-full"
-                        />
+                    <div className="h-full w-[420px] relative rounded-[20px] overflow-hidden">
+                        {imagePath != '' ?
+                            <Image
+                                src={imagePath}
+                                alt="Hero Image"
+                                fill
+                                className="object-cover "
+                            />
+                            : <Image
+                                src="/images/services/Machine Learning.png"
+                                alt="Hero Image"
+                                fill
+                                className="object-cover w-full h-full"
+                            />}
                     </div>
                 </div>
 

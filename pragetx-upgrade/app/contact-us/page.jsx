@@ -9,7 +9,8 @@ import TestimonialCard from '@/components/TrustedIndustry/TestimonialCard'
 import AnimationWrapper from '@/components/AnimationWrapper/AnimationWrapper'
 import { BlogCard } from '@/components/TrustedIndustry/AIAgentsSection'
 import Offices from '@/components/Offices/Offices'
-const ContactForm = dynamic(() => import('@/components/contact-from/ContactFrom'), { ssr: false });
+// const ContactForm = dynamic(() => import('@/components/contact-from/ContactFrom'), { ssr: false });
+import ContactForm from '@/components/contact-from/ContactFrom'
 import Line from "@/public/homescreen/line.png"
 
 // export const metadata = {
@@ -119,7 +120,7 @@ const page = () => {
         <>
             {/* <SchemaScript schema={contactusSchema} /> */}
 
-            <section className='bg-black' style={{ paddingTop: '0px'  }}>
+            <section className='contact-us-bg' style={{paddingTop:'70px'}}>
                 <div className='container'>
                     <div className="flex  justify-between contact-s1-responsive">
                         <div className="left  lg:my-auto center">

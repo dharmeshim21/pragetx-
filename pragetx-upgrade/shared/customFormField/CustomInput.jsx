@@ -27,27 +27,50 @@ const CustomInput = ({
     max,
     color = "black",
     required = false,
+    transparent = false, // ✅ new prop
   } = props;
 
   const error = Boolean(
     _.get(touched, fields?.name) && _.get(errors, fields?.name)
   );
 
-  // Theme colors
+  // ✅ Determine theme
   const isDark = color === "black";
-  const bgColor = isDark ? "bg-black" : "bg-white";
+
+  // ✅ Adaptive glass color
+  const glassEffect = isDark
+    ? `
+        bg-black/65
+        backdrop-blur-md
+        border border-white/10
+        shadow-[0_4px_30px_rgba(0,0,0,0.2)]
+      `
+    : `
+        bg-white/20
+        backdrop-blur-md
+        border border-white/40
+        shadow-[0_4px_30px_rgba(255,255,255,0.1)]
+      `;
+
+  // ✅ Background logic
+  const bgColor = transparent
+    ? glassEffect
+    : isDark
+    ? "bg-black"
+    : "bg-white";
+
+  // ✅ Text and placeholder colors
   const textColor = isDark ? "text-white" : "text-black";
   const placeholderColor = isDark
-    ? "placeholder:text-white"
-    : "placeholder:text-[#666]";
+    ? "placeholder:text-white/80"
+    : "placeholder:text-[#555]";
 
-  // ✅ Adjust placeholder font size if it's long
+  // ✅ Placeholder size adjustments
   const isLongPlaceholder = placeholder && placeholder.length > 25;
   const placeholderSize = isLongPlaceholder
     ? "placeholder:text-[13px] md:placeholder:text-[14px]"
     : "placeholder:text-[16px]";
 
-  // ✅ Truncate placeholder text visually (avoid overflow)
   const placeholderStyle = `
     placeholder:overflow-hidden 
     placeholder:whitespace-nowrap 
@@ -55,10 +78,10 @@ const CustomInput = ({
   `;
 
   return (
-    <div className={`${className} relative `}>
+    <div className={`${className} relative`}>
       {/* Static label */}
       {labelType === "static" && (
-        <label htmlFor={`input-${fields.name} `} className={LABEL_FLOAT_CLASSES}>
+        <label htmlFor={`input-${fields.name}`} className={LABEL_FLOAT_CLASSES}>
           {label}
           {required && (
             <span className="text-red-500 font-bold align-middle"> *</span>
@@ -84,7 +107,7 @@ const CustomInput = ({
         </div>
       )}
 
-      {/* Input with better placeholder control */}
+      {/* Input */}
       <div className="relative w-full">
         <Input
           {...fields}
@@ -101,9 +124,9 @@ const CustomInput = ({
           autoComplete="off"
           isInvalid={error}
           classNames={{
-            base: "w-full h-[60px] ",
+            base: "w-full h-[60px]",
             inputWrapper: `
-              h-[60px] rounded-[15px] my-box px-[15px] shadow-none border-none focus:outline-none focus:ring-0 
+              h-[60px] rounded-[15px] my-box px-[15px] shadow-none border-none focus:outline-none focus:ring-0
               ${bgColor} ${textColor}
               ${startContent ? "pl-12" : ""} 
               ${endContent ? "pr-12" : ""}
@@ -114,8 +137,8 @@ const CustomInput = ({
           }}
         />
 
-        {/* Red star placed right after placeholder visually */}
-        {isDark && required && !value && placeholder && (
+        {/* Red star if required */}
+        {required && !value && placeholder && (
           <span
             className="absolute top-1/2 -translate-y-1/2 text-red-500 pointer-events-none transition-all duration-300"
             style={{
@@ -125,18 +148,14 @@ const CustomInput = ({
             *
           </span>
         )}
-
       </div>
 
-      {/* Error message (responsive, below border) */}
-      {error && (
-        <div className="mt-1">
-          <span className="block text-sm text-red-500 font-medium">
-            {errors[fields?.name]}
-          </span>
-        </div>
-      )}
-
+      {/* Error message */}
+      <div className="mt-1 min-h-[1.25rem]">
+        <span className="block text-sm text-red-500 font-medium">
+          {error ? errors[fields?.name] : "\u00A0"}
+        </span>
+      </div>
     </div>
   );
 };

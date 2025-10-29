@@ -1,15 +1,16 @@
 'use client';
 
-// import ScrollProgressBar from "@/components/ScrollProggress/ScrollProgressBar";
-import Footer from "@/layouts/Footer/Footer";
-import Header from "@/layouts/Header/Header";
+import Footer from '@/layouts/Footer/Footer';
+import Header from '@/layouts/Header/Header';
+import { scrollToResults } from '@/shared/utils/ScrollUtils';
+// import NextNProgressClient from "@/ui/NextNProgressClient";
 import { NextUIProvider } from '@nextui-org/react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import React from 'react';
-import { Toaster } from 'react-hot-toast';
 
 const Providers = ({ children }) => {
     const pathname = usePathname();
+    const searchParams = useSearchParams();
 
     const categories = [
         'artificial-intelligence', 'health-care', 'fintech', 'logistics-and-supply-chain',
@@ -18,6 +19,7 @@ const Providers = ({ children }) => {
         'social-networking'
     ];
 
+    // 🔹 Handle dynamic body class
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
             let className = '';
@@ -58,32 +60,34 @@ const Providers = ({ children }) => {
         }
     }, [pathname, categories]);
 
+    // 🔹 Scroll to top on route change
     React.useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });
     }, [pathname]);
 
+    // 🔹 Handle portfolio scroll based on filters
+    React.useEffect(() => {
+        const portfolioIndustry = sessionStorage.getItem("portfolio-industry-scroll");
+        if (pathname?.includes('/portfolio')) {
+            if (searchParams.size > 0 && portfolioIndustry === 'false') {
+                scrollToResults('portfolio-results', 120);
+                sessionStorage.setItem("portfolio-industry-scroll", true);
+            }
+        }
+    }, [pathname, searchParams]);
+
+    // 🔹 Hide header/footer for certain routes
     const showHeaderFooter = !pathname.includes('/email') &&
         !pathname.includes('/sign') &&
         !pathname.includes('/overview') &&
         !pathname.includes('/certificate') &&
         !pathname.includes('/thanks');
 
-    // ✅ Black header routes
-    const blackHeaderRoutes = ['/contact-us', '/ai-consulting-service', '/about'];
-    const isBlackHeader = blackHeaderRoutes.includes(pathname);
-
     return (
         <NextUIProvider>
-            <Toaster position="bottom-center" reverseOrder={false} />
-            {/* <ScrollProgressBar /> */}
-
-            {/* Header condition */}
-            {showHeaderFooter && (
-                <Header mode={isBlackHeader ? 'black' : undefined} />
-            )}
-
+            {/* <NextNProgressClient /> */}
+            {showHeaderFooter && <Header />}
             {children}
-
             {showHeaderFooter && <Footer />}
         </NextUIProvider>
     );

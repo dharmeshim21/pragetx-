@@ -1,11 +1,7 @@
 'use client';
 
 import React from 'react'
-import dynamic from "next/dynamic";
-
-const LetsTalkForm = dynamic(() => import('./LersTalkForm'), {
-    ssr: false,
-});
+import LetsTalkForm from './LersTalkForm';
 const LetsTalk = () => {
     return (
         <section

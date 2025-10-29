@@ -159,7 +159,7 @@ const About = () => {
         <div className="about">
             <SchemaScript schema={aboutSchema} />
 
-            <section className="flex items-center justify-center bg-black min-h-screen">
+            <section className="flex items-center justify-center about-us-bg min-h-screen">
                 <div className="container text-white flex flex-col items-center justify-between">
                     <div
                         className="aboutLinem flex items-center justify-center 2xl:gap-2 gap-1 px-3 py-[5px] rounded-full"
@@ -192,44 +192,97 @@ const About = () => {
             </section>
 
             <section>
-                <div className="container bg-gradient-to-l from-[#4FACFE]/80 to-[#FF9A9E]/80 text-white rounded-[50px] p-[30px] w-full flex flex-col items-center justify-center text-center">
-                    <div className="flex items-end justify-end h-20 w-20 self-end">
-                        <Image
-                            src={Star}
-                            alt="Star SVG"
-                            height={10000}
-                            width={10000}
-                            className="h-full w-full object-cover"
-                        />
+                <div className="container bg-gradient-to-l from-[#4FACFE] to-[#FF9A9E] text-white rounded-[50px] p-[30px] w-full flex flex-col items-center justify-center text-center">
+
+                    {/* ⭐ Top Star */}
+                    <div className="flex items-end justify-end self-end">
+                        <div className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] md:w-[65px] md:h-[65px] xl:w-[80px] xl:h-[80px]">
+                            <Image
+                                src={Star}
+                                alt="Star SVG"
+                                height={10000}
+                                width={10000}
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
                     </div>
-                    <div className="mt-[30px] ">
-                        <h2 className="font-[700] text-center leading-[100%] tracking-normal ibm">PragetX: How It All Started?</h2>
-                        <p className="font-[500] text-center leading-5 tracking-normal mt-5 px-[auto] md:px-28 " style={{ color: 'white', fontWeight: '500' }}>The idea of PragetX was like a buzzword in our founders’ minds that they couldn’t resist because the change it could bring across the IT sector. That’s how the leaders at PragetX came in front and laid its pillars in 2021 with an aim to be a helping hand to businesses suffering in their digital transformation journey due to a sudden need to transition to remote work settlements. Though it’s just a startup, during just a year of the journey, this visionary team has accomplished many milestones and has served 54+ global brands with extraordinary and compelling results as promised.</p>
+
+                    {/* ✨ Content (unchanged) */}
+                    <div className="mt-[30px]">
+                        <h2 className="font-[700] text-center leading-[100%] tracking-normal ibm">
+                            PragetX: How It All Started?
+                        </h2>
+                        <p
+                            className="font-[500] text-center leading-5 tracking-normal mt-5 px-[auto] md:px-28"
+                            style={{ color: "white", fontWeight: "500" }}
+                        >
+                            The idea of PragetX was like a buzzword in our founders’ minds that they
+                            couldn’t resist because the change it could bring across the IT sector.
+                            That’s how the leaders at PragetX came in front and laid its pillars in
+                            2021 with an aim to be a helping hand to businesses suffering in their
+                            digital transformation journey due to a sudden need to transition to
+                            remote work settlements. Though it’s just a startup, during just a year
+                            of the journey, this visionary team has accomplished many milestones and
+                            has served 54+ global brands with extraordinary and compelling results as
+                            promised.
+                        </p>
                     </div>
-                    <div className="flex items-start justify-start self-start h-20 w-20 mt-[30px]">
-                        <Image
-                            src={Star}
-                            alt="Star SVG"
-                            height={10000}
-                            width={10000}
-                            className="h-full w-full object-cover"
-                        />
+
+                    {/* ⭐ Bottom Star */}
+                    <div className="flex items-start justify-start self-start mt-[30px]">
+                        <div className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] md:w-[65px] md:h-[65px] xl:w-[80px] xl:h-[80px]">
+                            <Image
+                                src={Star}
+                                alt="Star SVG"
+                                height={10000}
+                                width={10000}
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
+
 
             <section className="pt-0 bg-[linear-gradient(90deg,rgba(168,86,247,0.06)_0%,rgba(106,90,205,0.06)_50%,rgba(0,161,224,0.06)_100%)]">
-                <div className="container flex flex-col 2xl:flex-row w-full items-center justify-between gap-10 2xl:gap-30 ">
-                    <div className="h-[300px] md:h-[450px] w-2/3  lg:w-[600px] 2xl:w-1/2 rounded-[46px] bg-white shadow-[0_0_6px_0_#00000040] bg-cover bg-center">
+                <div className="container flex flex-col xl:flex-row w-full items-center gap-8 xl:gap-15">
 
+                    <div className="h-[300px] md:h-[450px]   xl:w-1/2 rounded-[46px] shadow-[0_0_6px_0_#00000040] overflow-hidden">
+                        <Image
+                            src="/images/pragetanam-pragetx.png"
+                            alt="Pragetanam PragetX"
+                            width={600}
+                            height={450}
+                            className="object-cover w-full h-full"
+                        />
                     </div>
-                    <div className="flex flex-col gap-6 xl:w-1/2 justify-center items-start ">
-                        <h2 className="font-[700] leading-[110%] tracking-normal text-center  2xl:text-start">Build your Companys Pragetanam with <span className="text-[#38BDF8]">PragetX</span></h2>
-                        <p className="font-[500] leading-5 tracking-normal md:max-w-[500px] text-center 2xl:text-start lg:mx-0 mx-auto" style={{ fontSize: '18px', fontWeight: '500' }}>A team of smart and passionate leaders and adaptive software developers, working all together to deliver customized IT solutions, like web & mobile app development, cloud computing, DevOps, and Enterprise IT solutions, with precisions to meet the vision to help you build your brand credibility</p>
-                        <Button radius="full" type="button" className="bg-custom-gradient mt-[10px] py-2.5 px-[40px] font-[500] text-xl mx-auto 2xl:mx-0 leading-[100%] tracking-[0.2px]">Get Start</Button>
+
+                    <div className="flex flex-col gap-6 xl:w-1/2 justify-center items-start">
+                        <h2 className="font-[700] leading-[110%] tracking-normal text-center xl:text-start">
+                            Build your Companys Pragetanam with{" "}
+                            <span className="text-[#38BDF8]">PragetX</span>
+                        </h2>
+                        <p
+                            className="font-[500] leading-5 tracking-normal md:max-w-[500px] text-center xl:text-start lg:mx-0 mx-auto"
+                            style={{ fontSize: "18px", fontWeight: "500" }}
+                        >
+                            A team of smart and passionate leaders and adaptive software developers,
+                            working all together to deliver customized IT solutions, like web &
+                            mobile app development, cloud computing, DevOps, and Enterprise IT
+                            solutions, with precisions to meet the vision to help you build your
+                            brand credibility
+                        </p>
+                        <Button
+                            radius="full"
+                            type="button"
+                            className="bg-custom-gradient mt-[10px] py-2.5 px-[40px] font-[500] text-xl mx-auto 2xl:mx-0 leading-[100%] tracking-[0.2px]"
+                        >
+                            Get Start
+                        </Button>
                     </div>
                 </div>
             </section>
+
 
             <section className="pt-0">
                 <div className="flex flex-col items-center justify-center gap-14">
@@ -271,71 +324,52 @@ const About = () => {
                 </div>
             </section>
 
-            <section className="pt-0">
-                <div className="container bg-gradient-to-l from-[#FF9A9E]/80 to-[#4FACFE]/80 text-white rounded-[50px] p-[50px] w-full flex flex-col items-center justify-center text-center">
-                    <div className="flex items-end justify-end h-20 w-20 self-end">
-                        <Image
-                            src={Star}
-                            alt="Star SVG"
-                            height={10000}
-                            width={10000}
-                            className="h-full w-full object-cover"
-                        />
+
+            <section>
+                <div className="container bg-gradient-to-l from-[#4FACFE] to-[#FF9A9E] text-white rounded-[50px] p-[30px] w-full flex flex-col items-center justify-center text-center">
+
+                    {/* ⭐ Top Star */}
+                    <div className="flex items-end justify-end self-end">
+                        <div className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] md:w-[65px] md:h-[65px] xl:w-[80px] xl:h-[80px]">
+                            <Image
+                                src={Star}
+                                alt="Star SVG"
+                                height={10000}
+                                width={10000}
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
                     </div>
-                    <div className="mt-[30px] ">
-                        <h1 className="font-[700] text-center leading-[100%] tracking-normal">Build a Best Ethical Career with PragetX</h1>
-                        <p className="font-[500] text-center leading-5 tracking-normal mt-5 px-20 md:px-48">We like to bring creativity to life for our team members. Belief in the culture of our company makes it the best place to work.</p>
-                        <Button
-                            className="
-                            mt-[30px]
-                            relative
-                            inline-flex items-center justify-center
-                            px-12 py-4
-                            rounded-full
-                            overflow-hidden
-                            group
-                            transition-all duration-300 ease-out transform
-                            hover:scale-105 active:scale-95
-                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white
-                        "
+
+                    {/* ✨ Content (unchanged) */}
+                    <div className="mt-[30px]">
+                        <h2 className="font-[700] text-center leading-[100%] tracking-normal ibm">
+                            Build a Best Ethical Career with PragetX
+                        </h2>
+                        <p
+                            className="font-[500] text-center leading-5 tracking-normal mt-5  xl:w-[70%] mx-auto"
+                            style={{ color: "white", fontWeight: "500" }}
                         >
-                            {/* ... button spans (unchanged) ... */}
-                            <span
-                                className="absolute inset-0 
-                                bg-gradient-to-r from-gray-50 to-white 
-                                transition-all duration-300 ease-out 
-                                group-hover:opacity-0"
-                            ></span>
-
-                            <span
-                                className="absolute inset-0 
-                                bg-gradient-to-r from-white to-gray-50 
-                                opacity-0 group-hover:opacity-100 
-                                transition-all duration-300 ease-out"
-                            ></span>
-
-                            {/* Text with gradient */}
-                            <span
-                                className="relative z-10 text-xl font-bold 
-                                bg-gradient-to-r from-[#3730A3] to-[#38BDF8] 
-                                text-transparent bg-clip-text
-                                transition-colors duration-300 ease-out"
-                            >
-                                Join Us Today
-                            </span>
-                        </Button>
+                            We like to bring creativity to life for our team members. Belief in the culture of our company makes it the best place to work.
+                        </p>
                     </div>
-                    <div className="flex items-start justify-start self-start h-20 w-20 mt-[30px]">
-                        <Image
-                            src={Star}
-                            alt="Star SVG"
-                            height={10000}
-                            width={10000}
-                            className="h-full w-full object-cover"
-                        />
+
+                    {/* ⭐ Bottom Star */}
+                    <div className="flex items-start justify-start self-start mt-[30px]">
+                        <div className="w-[40px] h-[40px] sm:w-[55px] sm:h-[55px] md:w-[65px] md:h-[65px] xl:w-[80px] xl:h-[80px]">
+                            <Image
+                                src={Star}
+                                alt="Star SVG"
+                                height={10000}
+                                width={10000}
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
+
+
 
             <section className="pt-0">
                 <div className="container text-center flex flex-col items-center justify-center gap-5 ">
@@ -404,92 +438,98 @@ const About = () => {
 
 
 
-            <section className="  p-0">
+            <section className="p-0">
                 <AnimationWrapper>
                     <div
                         className="
-                    container
-                    relative
-                    mx-auto 
-                    py-[100px]   // Vertical padding for inner content centering
-                    rounded-[50px]
-                    overflow-hidden  
-                    text-center
-                    my-box
-                "
+                                    container
+                                    relative
+                                    mx-auto
+                                    py-[100px]
+                                    rounded-[50px]
+                                    overflow-hidden
+                                    text-center
+                                 my-box"
                         style={{
-                            // Combine the dotted pattern and the gradient background
                             background: `
-                        url(${'/homescreen/homeCard/dottedImg2.png'}) center/auto repeat, 
-                        linear-gradient(91.69deg, #FF9A9E -0.03%, #4FACFE 99.97%)
-                    `,
+                                    url('/homescreen/homeCard/dottedImg2.png') center/auto repeat,
+                                    linear-gradient(91.69deg, #FF9A9E -0.03%, #4FACFE 99.97%)`,
                         }}
                     >
-                        {/* Decorative Star 1 (Top-Right) */}
+                        {/* ⭐ Decorative Star 1 (Top-Right) */}
                         <img
-                            src={'/homescreen/homeCard/star.png'}
+                            src="/homescreen/homeCard/star.png"
                             alt="Decorative Star"
-                            className="absolute top-8 right-8 h-10 w-10  z-10"
+                            className="
+                                    absolute top-8 right-8
+                                    w-[40px] h-[40px]
+                                    sm:w-[55px] sm:h-[55px]
+                                    md:w-[65px] md:h-[65px]
+                                    xl:w-[80px] xl:h-[80px]
+                                    z-10 "
                         />
 
-                        {/* Decorative Star 2 (Bottom-Left) */}
+                        {/* ⭐ Decorative Star 2 (Bottom-Left) */}
                         <img
-                            src={'/homescreen/homeCard/star.png'}
+                            src="/homescreen/homeCard/star.png"
                             alt="Decorative Star"
-                            className="absolute bottom-8 left-8 h-10 w-10  z-10"
+                            className="
+                                    absolute bottom-8 left-8
+                                    w-[40px] h-[40px]
+                                    sm:w-[55px] sm:h-[55px]
+                                    md:w-[65px] md:h-[65px]
+                                    xl:w-[80px] xl:h-[80px]
+                                    z-10 "
                         />
 
-                        {/* Content Wrapper */}
+                        {/* 🌟 Content */}
                         <div className="relative z-20 flex flex-col items-center justify-center">
-                            {/* Top Subtitle */}
-
-
-                            {/* Main Heading */}
-                            <h1 className="text-white  leading-tight mb-8 mt-2 2xl:w-[900px]" style={{ }}>
-                                {/* ⚡ Added mt-2 (margin-top: 2) to compensate slightly for mb-0 on p-tag */}
+                            <h2 className="text-white leading-tight mb-8 mt-2 2xl:w-[900px]">
                                 Accelerate Your Digital Business Transformation Journey with PragetX
-                            </h1>
+                            </h2>
 
-                            <p className="text-white text-lg  mb-0 font-light tracking-wide w-auto 2xl:w-[90%]" style={{  color: 'white', fontWeight: 600 }}>
-                                {/* ⚡ KEY FIX: Changed mb-4 to mb-0 (margin-bottom: 0) to remove the gap */}
-                                Being a Startup, we understand how important it is for a business to have the right technology and tools in place. Leverage us to be an essential part of your digital transformation journey and pave this initial phase of business growth TOGETHER!
+                            <p
+                                className="text-white text-lg mb-0 font-light tracking-wide w-auto 2xl:w-[90%]"
+                                style={{ color: 'white', fontWeight: 600 }}
+                            >
+                                Being a Startup, we understand how important it is for a business to
+                                have the right technology and tools in place. Leverage us to be an
+                                essential part of your digital transformation journey and pave this
+                                initial phase of business growth TOGETHER!
                             </p>
-                            {/* Get Started Button (Kept existing styling) */}
+
                             <Button
                                 className="
-                                mt-[30px]
-                            relative
-                            inline-flex items-center justify-center
-                            px-12 py-4
-                            rounded-full
-                            overflow-hidden
-                            group
-                            transition-all duration-300 ease-out transform
-                            hover:scale-105 active:scale-95
-                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white
-                        "
+                                        mt-[30px]
+                                        relative
+                                        inline-flex items-center justify-center
+                                        px-12 py-4
+                                        rounded-full
+                                        overflow-hidden
+                                        group
+                                        transition-all duration-300 ease-out transform
+                                        hover:scale-105 active:scale-95
+                                        focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white "
                             >
-                                {/* ... button spans (unchanged) ... */}
                                 <span
                                     className="absolute inset-0 
-                                bg-gradient-to-r from-gray-50 to-white 
-                                transition-all duration-300 ease-out 
-                                group-hover:opacity-0"
+                                        bg-gradient-to-r from-gray-50 to-white 
+                                        transition-all duration-300 ease-out 
+                                        group-hover:opacity-0"
                                 ></span>
 
                                 <span
                                     className="absolute inset-0 
-                                bg-gradient-to-r from-white to-gray-50 
-                                opacity-0 group-hover:opacity-100 
-                                transition-all duration-300 ease-out"
+                                        bg-gradient-to-r from-white to-gray-50 
+                                        opacity-0 group-hover:opacity-100 
+                                        transition-all duration-300 ease-out"
                                 ></span>
 
-                                {/* Text with gradient */}
                                 <span
                                     className="relative z-10 text-xl font-bold 
-                                bg-gradient-to-r from-[#3730A3] to-[#38BDF8] 
-                                text-transparent bg-clip-text
-                                transition-colors duration-300 ease-out"
+                                        bg-gradient-to-r from-[#3730A3] to-[#38BDF8] 
+                                        text-transparent bg-clip-text
+                                        transition-colors duration-300 ease-out"
                                 >
                                     Join Us Today
                                 </span>
@@ -497,7 +537,6 @@ const About = () => {
                         </div>
                     </div>
                 </AnimationWrapper>
-
             </section>
 
 
@@ -519,81 +558,90 @@ const About = () => {
 
 
 
-            <section className="  p-0">
+            <section className="p-0">
                 <AnimationWrapper>
                     <div
                         className="
-                    container
-                    relative
-                    py-[100px] px-auto  // Vertical padding for inner content centering
-                    rounded-[50px]
-                    overflow-hidden  
-                    text-center
-                    my-box
-                "
+                                    container
+                                    relative
+                                    py-[100px] px-auto
+                                    rounded-[50px]
+                                    overflow-hidden
+                                    text-center
+                                    my-box"
                         style={{
-                            // Combine the dotted pattern and the gradient background
                             background: `
-                        url(${'/homescreen/homeCard/dottedImg2.png'}) center/auto repeat, 
-                        linear-gradient(91.69deg, #FF9A9E -0.03%, #4FACFE 99.97%)
-                    `,
+                                    url('/homescreen/homeCard/dottedImg2.png') center/auto repeat,
+                                    linear-gradient(91.69deg, #FF9A9E -0.03%, #4FACFE 99.97%)
+                                    `,
                         }}
                     >
-                        {/* Decorative Star 1 (Top-Right) */}
+                        {/* ⭐ Decorative Star 1 (Top-Right) */}
                         <img
-                            src={'/homescreen/homeCard/star.png'}
+                            src="/homescreen/homeCard/star.png"
                             alt="Decorative Star"
-                            className="absolute top-8 right-8 h-10 w-10  z-10"
+                            className="
+                                    absolute top-8 right-8
+                                    w-[40px] h-[40px]
+                                    sm:w-[55px] sm:h-[55px]
+                                    md:w-[65px] md:h-[65px]
+                                    xl:w-[80px] xl:h-[80px]
+                                    z-10
+                                    "
                         />
 
-                        {/* Decorative Star 2 (Bottom-Left) */}
+                        {/* ⭐ Decorative Star 2 (Bottom-Left) */}
                         <img
-                            src={'/homescreen/homeCard/star.png'}
+                            src="/homescreen/homeCard/star.png"
                             alt="Decorative Star"
-                            className="absolute bottom-8 left-8 h-10 w-10  z-10"
+                            className="
+          absolute bottom-8 left-8
+          w-[40px] h-[40px]
+          sm:w-[55px] sm:h-[55px]
+          md:w-[65px] md:h-[65px]
+          xl:w-[80px] xl:h-[80px]
+          z-10
+        "
                         />
 
+                        {/* 🌟 Content */}
                         <div className="relative z-20 flex flex-col items-center justify-center">
-                            {/* Main Heading */}
-                            <h1 className="text-white  leading-tight  mt-2 " style={{ fontSize: '50px' }}>
-                                {/* ⚡ Added mt-2 (margin-top: 2) to compensate slightly for mb-0 on p-tag */}
+                            <h2 className="text-white leading-tight mt-2 xl:w-[70%]">
                                 We are your ideal partner to leverage emerging tech in innovative ways
-                            </h1>
+                            </h2>
+
                             <Button
                                 className="
-                                mt-[30px]
-                            relative
-                            inline-flex items-center justify-center
-                            px-12 py-4
-                            rounded-full
-                            overflow-hidden
-                            group
-                            transition-all duration-300 ease-out transform
-                            hover:scale-105 active:scale-95
-                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white
-                        "
+                                        mt-[30px]
+                                        relative
+                                        inline-flex items-center justify-center
+                                        px-12 py-4
+                                        rounded-full
+                                        overflow-hidden
+                                        group
+                                        transition-all duration-300 ease-out transform
+                                        hover:scale-105 active:scale-95
+                                        focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
                             >
-                                {/* ... button spans (unchanged) ... */}
                                 <span
                                     className="absolute inset-0 
-                                bg-gradient-to-r from-gray-50 to-white 
-                                transition-all duration-300 ease-out 
-                                group-hover:opacity-0"
+                                                bg-gradient-to-r from-gray-50 to-white 
+                                                transition-all duration-300 ease-out 
+                                                group-hover:opacity-0"
                                 ></span>
 
                                 <span
                                     className="absolute inset-0 
-                                bg-gradient-to-r from-white to-gray-50 
-                                opacity-0 group-hover:opacity-100 
-                                transition-all duration-300 ease-out"
+                                                bg-gradient-to-r from-white to-gray-50 
+                                                opacity-0 group-hover:opacity-100 
+                                                transition-all duration-300 ease-out"
                                 ></span>
 
-                                {/* Text with gradient */}
                                 <span
                                     className="relative z-10 text-xl font-bold 
-                                bg-gradient-to-r from-[#3730A3] to-[#38BDF8] 
-                                text-transparent bg-clip-text
-                                transition-colors duration-300 ease-out"
+                                                bg-gradient-to-r from-[#3730A3] to-[#38BDF8] 
+                                                text-transparent bg-clip-text
+                                                transition-colors duration-300 ease-out"
                                 >
                                     Join Us Today
                                 </span>
@@ -602,6 +650,7 @@ const About = () => {
                     </div>
                 </AnimationWrapper>
             </section>
+
 
 
 

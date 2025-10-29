@@ -230,17 +230,14 @@ const LetsTalkForm = () => {
                                 <label htmlFor="contactNumber" className={LABEL_FLOAT_CLASSES} style={{ zIndex: 60 }}>
                                     Phone Number <span className="text-red-500">*</span>
                                 </label>
-                                <div className={`flex items-center ${INPUT_BASE_CLASSES.inputWrapper} p-0 rounded-[15px]`}>
 
-                                    <Field
-                                        name="contactNumber"
-                                        placeholder="Enter your phone number"
-                                        component={CustomPhoneNumberInput}
-                                        specialLabel=""
-                                        color='white'
-                                    />
-                                </div>
-
+                                <Field
+                                    name="contactNumber"
+                                    placeholder="Enter your phone number"
+                                    component={CustomPhoneNumberInput}
+                                    specialLabel=""
+                                    color='white'
+                                />
                             </div>
 
                             {/* Work Email */}
@@ -292,14 +289,14 @@ const LetsTalkForm = () => {
                             <label htmlFor="projectRequirement" className={LABEL_FLOAT_CLASSES}>
                                 Tell Us About Your Project
                             </label>
-                             <Field
-                                    name="projectRequirement"
-                                    placeholder="Briefly describe your project requirements..."
-                                    color='white'
-                                    component={CustomTextArea}
-                                />
+                            <Field
+                                name="projectRequirement"
+                                placeholder="Briefly describe your project requirements..."
+                                color='white'
+                                component={CustomTextArea}
+                            />
 
-                            
+
                         </div>
 
                         {/* File Upload Section */}

@@ -21,6 +21,36 @@ import TestimonialCard from '@/components/TrustedIndustry/TestimonialCard'
 import { BlogCard } from '@/components/TrustedIndustry/AIAgentsSection'
 const page = () => {
     const buttons = ["ML Cloud Services", "Containerization", "RAG"];
+    const techOptions = [
+        {
+            id: '1',
+            title: 'Machine Learning',
+            details: 'Custom machine learning algorithms that learn from your data to make predictions, recognize patterns, and improve over time.',
+            keywords: ['Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning'],
+            image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=ML+Image+Placeholder'
+        },
+        {
+            id: '2',
+            title: 'Natural Language Processing',
+            details: 'Enabling computers to understand, interpret, and generate human language for tasks like translation, sentiment analysis, and chatbots.',
+            keywords: ['Text Generation', 'Sentiment Analysis', 'Machine Translation'],
+            image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=NLP+Image+Placeholder'
+        },
+        {
+            id: '3',
+            title: 'Computer Vision',
+            details: 'Extracting meaningful information from digital images, videos, and other visual inputs to automate visual tasks.',
+            keywords: ['Object Detection', 'Facial Recognition', 'Image Segmentation'],
+            image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=CV+Image+Placeholder'
+        },
+        {
+            id: '4',
+            title: 'AI Chatbots',
+            details: 'Intelligent conversational agents that simulate human conversation through voice commands or text chats, powered by AI.',
+            keywords: ['Generative AI', 'Context Awareness', 'Customer Service Bots'],
+            image: 'https://via.placeholder.com/350x250/000000/FFFFFF?text=Chatbot+Image+Placeholder'
+        },
+    ];
 
     const industries = [
         {
@@ -157,10 +187,8 @@ const page = () => {
     const dottedImagePath = '/homescreen/homeCard/dottedImg2.png';
     return (
         <>
-
-
-            <section className='bg-black  min-h-screen'>
-                <div className="container">
+            <section className='ai-services-bg min-h-screen '>
+                <div className="container xl:pt-[100px] ">
                     <div className="div">
                         <div
                             className="aboutLinem flex gap-2 mx-auto w-fit px-[15px] py-[5px] rounded-full items-center"
@@ -189,7 +217,7 @@ const page = () => {
                                     }}
                                 >
                                     Transforming Business
-                                    Through AI Innovation
+                                    Through AI<span className="bg-[linear-gradient(95.74deg,#3730A3_-29.39%,#38BDF8_114.09%)] bg-clip-text text-transparent"> Innovation</span>
                                 </h1>
 
 
@@ -224,7 +252,7 @@ const page = () => {
                     </div>
                 </div>
 
-                <TechSelector />
+                <TechSelector techOptions={techOptions}/>
             </section>
 
             <section>
