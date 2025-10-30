@@ -19,6 +19,7 @@ import SuccessComp from '@/components/success/SuccessComp'
 import { Card, CardFooter } from '@nextui-org/react'
 import TestimonialCard from '@/components/TrustedIndustry/TestimonialCard'
 import { BlogCard } from '@/components/TrustedIndustry/AIAgentsSection'
+import TopSlider from '@/components/TopSlider/TopSlider'
 const page = () => {
     const buttons = ["ML Cloud Services", "Containerization", "RAG"];
     const techOptions = [
@@ -124,61 +125,70 @@ const page = () => {
     const WhyChooseServiceData = [
         {
             number: "1",
-            title: "Growth",
-            description: "We continuously help businesses grow through innovation and scalable technology.",
+            title: "Expertise-Driven Team",
+            description:
+                "With years of experience and a deep understanding of emerging technologies, we transform innovative AI solutions into business growth.",
             img: "/images/services/growth.png",
-            color: "#3C83F6"
+            color: "#3C83F6",
         },
         {
             number: "2",
-            title: "Invention",
-            description: "Our approach is rooted in invention — building unique solutions tailored for your challenges.",
+            title: "Fast Teamwork & Timely Deployment",
+            description:
+                "We follow agile workflows and streamlined coordination, ensuring efficient project management without compromising quality.",
             img: "/images/services/invention.png",
-            color: "#A856F7"
+            color: "#A856F7",
         },
         {
             number: "3",
-            title: "Artificial Intelligence",
-            description: "Harnessing AI to automate processes, uncover insights, and enhance decision-making.",
+            title: "Highly Skilled Developers & Leaders",
+            description:
+                "Our top-tier developers excel in advanced AI techniques, delivering innovative, strategic, and technical solutions.",
             img: "/images/services/artificial-intelligence.png",
-            color: "#3C83F6"
+            color: "#3C83F6",
         },
         {
             number: "4",
-            title: "Hands",
-            description: "We collaborate hand-in-hand with clients to deliver seamless, effective results.",
+            title: "Flexible Work Approach",
+            description:
+                "We adapt to client needs with customizable workflows, ensuring faster project completion and seamless delivery.",
             img: "/images/services/hands.png",
-            color: "#A856F7"
+            color: "#A856F7",
         },
         {
             number: "5",
-            title: "Medal",
-            description: "Our commitment to excellence has earned us recognition for high-quality performance.",
+            title: "Scalable Solutions",
+            description:
+                "Our AI solutions are designed to scale effortlessly, featuring robust architecture and technology integration.",
             img: "/images/services/medal.png",
-            color: "#3C83F6"
+            color: "#3C83F6",
         },
         {
             number: "6",
-            title: "Navigation",
-            description: "We guide businesses through complex digital landscapes with precision and strategy.",
+            title: "Transparent Collaboration",
+            description:
+                "We keep you informed at every step, ensuring consistent decision-making for critical project phases.",
             img: "/images/services/navigation.png",
-            color: "#A856F7"
+            color: "#A856F7",
         },
         {
             number: "7",
-            title: "Recycle",
-            description: "Sustainability is built into our process — reusing, optimizing, and improving continuously.",
+            title: "End-to-End Service",
+            description:
+                "From data collection to deployment, we offer full-stack support with integrated management.",
             img: "/images/services/recycle.png",
-            color: "#3C83F6"
+            color: "#3C83F6",
         },
         {
             number: "8",
-            title: "Security",
-            description: "Protecting data and ensuring system integrity is our topmost priority.",
+            title: "Cutting-Edge Tools",
+            description:
+                "We leverage the latest AI, ML, and data frameworks, ensuring scalability and future-ready solutions.",
             img: "/images/services/security.png",
-            color: "#A856F7"
-        }
+            color: "#A856F7",
+        },
     ];
+
 
     const agentTitleGradient =
         "bg-clip-text text-transparent bg-[linear-gradient(50.25deg,_#3730A3_3.51%,_#38BDF8_30.28%)]"
@@ -188,71 +198,30 @@ const page = () => {
     return (
         <>
             <section className='ai-services-bg min-h-screen '>
-                <div className="container xl:pt-[100px] ">
-                    <div className="div">
-                        <div
-                            className="aboutLinem flex gap-2 mx-auto w-fit px-[15px] py-[5px] rounded-full items-center"
-                            style={{
-                                fontSize: '14px',
-                                fontWeight: 400,
-                                background: 'linear-gradient(90deg, rgba(168, 86, 247, 0.5) 0%, rgba(106, 90, 205, 0.5) 50%, rgba(0, 161, 224, 0.5) 100%)'
-                            }}
-                        >
-                            <span
-                                className="text-white"
-                                style={{
-                                    fontSize: '15px',
-                                    fontWeight: '500', // medium weight
-                                }}
-                            >
-                                Artificial Intelligence Services </span>
-
-                        </div>
-
-                        <div className="middle flex flex-col items-center mt-5 ">
-                            <div className="mb-[15px] my-auto w-[75%] text-center ibm" style={{ fontWeight: 'bolder', lineHeight: 1.3, color: 'white' }}>
-                                <h1
-                                    style={{
-
-                                    }}
-                                >
-                                    Transforming Business
-                                    Through AI<span className="bg-[linear-gradient(95.74deg,#3730A3_-29.39%,#38BDF8_114.09%)] bg-clip-text text-transparent"> Innovation</span>
-                                </h1>
-
-
-                            </div>
-
-                            <p className="w-[72%] text-center" style={{ fontWeight: 500, fontSize: '18px', lineHeight: 1.2, color: 'white' }}>Leverage cutting-edge artificial intelligence solutions to optimize operations,enhance customer experiences, and drive business growth in the digital era.</p>
-
-                            <div className="btns  mt-[30px]">
-                                <Button
-                                    className="cursor-pointer bg-gradient-to-r h-[38px] w-[220px] font-bold from-[#3730A3] to-[#38BDF8] px-[10px]  text-white rounded-full"
-                                >
-                                    Talk To Our Consultant
-                                </Button>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <TopSlider
+                    mainSubtitle="Artificial Intelligence Services"
+                    title="Transforming Business"
+                    titleBreak="Through AI"
+                    gradientText="Innovation"
+                    subtitle="Leverage cutting-edge artificial intelligence solutions to optimize operations,enhance customer experiences, and drive business growth in the digital era."
+                    button="Talk To Our Consultant"
+                />
             </section>
 
 
             <section style={{ paddingBottom: '0px' }}>
                 <div className="container" >
                     <div className="flex flex-col items-center gap-[15px]">
-                        <h2 className="font-bold ibm">
+                        <h2 className="font-bold ibm center">
                             <span className="text-[#3756B9] ">AI </span>{" "} Development Services We Offer
                         </h2>
-                        <p className="w-[60%]  text-center" >
+                        <p className="w-full lg:w-[60%]  text-center" >
                             Unlock the full potential of artificial intelligence with our comprehensive suite of AI development services tailored to your business needs.
                         </p>
                     </div>
                 </div>
 
-                <TechSelector techOptions={techOptions}/>
+                <TechSelector techOptions={techOptions} />
             </section>
 
             <section>
@@ -261,7 +230,7 @@ const page = () => {
                         <h2 className="font-bold ibm">AI {" "}
                             <span className="text-[#3756B9] ">Lifecycle </span>{" "} Management
                         </h2>
-                        <p className="w-[50%]  text-center" >
+                        <p className="w-full lg:w-[50%]  text-center" >
                             Our systematic approach to AI development ensures efficient delivery of robust AI solutions tailored to your business needs.
                         </p>
                     </div>
@@ -316,26 +285,54 @@ const page = () => {
                             />
 
                             {/* 3 Icons on top */}
-                            <div className=" relative z-10 flex flex-row md:flex-row justify-center items-center h-full">
+                            <div className="relative z-10 flex flex-row md:flex-row justify-center items-center h-full">
                                 <div className="flex flex-col items-center justify-center w-[174px] h-[156px]">
                                     <div className="w-[80px] h-[80px]">
-                                        <Image src="/images/solutionImg/sagemaker-icon.png" className='object-contain h-full w-full' alt="Sagemaker" height={10000} width={10000} />
+                                        <Image
+                                            src="/images/solutionImg/sagemaker-icon.png"
+                                            className="object-contain h-full w-full"
+                                            alt="Sagemaker"
+                                            height={100}
+                                            width={100}
+                                        />
                                     </div>
-                                    <span style={{ fontSize: '25px', fontWeight: '500' }}>Sagemaker</span>
+                                    <span className="font-medium text-[18px] sm:text-[20px] lg:text-[25px] mt-2">
+                                        Sagemaker
+                                    </span>
                                 </div>
+
                                 <div className="flex flex-col justify-center items-center w-[174px] h-[156px]">
                                     <div className="w-[80px] h-[80px]">
-                                        <Image src="/images/solutionImg/vertexai-icon.png" className='object-contain h-full w-full' alt="VertexAI" width={10000} height={1000} />
+                                        <Image
+                                            src="/images/solutionImg/vertexai-icon.png"
+                                            className="object-contain h-full w-full"
+                                            alt="VertexAI"
+                                            width={100}
+                                            height={100}
+                                        />
                                     </div>
-                                    <span style={{ fontSize: '25px', fontWeight: '500' }}>VertexAI</span>
+                                    <span className="font-medium text-[18px] sm:text-[20px] lg:text-[25px] mt-2">
+                                        VertexAI
+                                    </span>
                                 </div>
+
                                 <div className="flex flex-col justify-center items-center w-[174px] h-[156px]">
                                     <div className="w-[80px] h-[80px]">
-                                        <Image src="/images/solutionImg/azure-icon.png" className='object-contain h-full w-full' alt="Azure" width={1000} height={100} />
+                                        <Image
+                                            src="/images/solutionImg/azure-icon.png"
+                                            className="object-contain h-full w-full"
+                                            alt="Azure"
+                                            width={100}
+                                            height={100}
+                                        />
                                     </div>
-                                    <span style={{ fontSize: '25px', fontWeight: '500' }}>Azure</span>
+                                    <span className="font-medium text-[18px] sm:text-[20px] lg:text-[25px] mt-2">
+                                        Azure
+                                    </span>
                                 </div>
                             </div>
+
+
                         </div>
 
 
@@ -465,7 +462,7 @@ const page = () => {
                         <h2 className="font-bold ibm">
                             Why Choose <span className="text-[#3756B9]">Us</span>
                         </h2>
-                        <p className="w-[50%] text-center">
+                        <p className="w-full lg:w-[50%] text-center">
                             Partner with a team that combines deep technical expertise with
                             business acumen to deliver AI solutions that drive real value.
                         </p>
@@ -473,17 +470,29 @@ const page = () => {
 
                     <Swiper
                         slidesPerView="auto"
-                        spaceBetween={250}
+                        spaceBetween={40} // ✅ reduced from 250 → 40
                         slidesPerGroup={1}
                         mousewheel={true}
                         freeMode={true}
                         pagination={false}
                         centerInsufficientSlides={true}
                         modules={[Mousewheel, FreeMode]}
-                        className="mySwiper mt-[70px] pt-10 !flex-nowrap"
+                        className="mySwiper mt-[50px] pt-6 !flex-nowrap"
+                        breakpoints={{
+                            320: { spaceBetween: 16 },   // 📱 mobile
+                            640: { spaceBetween: 24 },   // 📲 small tablet
+                            1024: { spaceBetween: 40 },  // 💻 desktop
+                            1440: { spaceBetween: 60 },  // 🖥️ large screen
+                        }}
                     >
                         {WhyChooseServiceData.map((item, index) => (
-                            <SwiperSlide key={index} style={{ width: "300px" }}>
+                            <SwiperSlide
+                                key={index}
+                                style={{
+                                    width: "auto", // ✅ cards auto-size to their content (from responsive width in component)
+                                    maxWidth: "500px", // prevent too wide cards
+                                }}
+                            >
                                 <WhyChooseCard
                                     title={item.title}
                                     description={item.description}
@@ -493,6 +502,7 @@ const page = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+
 
 
                 </div>
@@ -511,7 +521,7 @@ const page = () => {
                 <h2 className="font-bold ibm">
                     Industries Transforming with  <span className="text-[#3756B9] ">AI</span>
                 </h2>
-                <p className="w-[50%]  text-center mx-auto mt-[15px]" >
+                <p className="w-full lg:w-[50%]  text-center mx-auto mt-[15px]" >
                     Discover how artificial intelligence is revolutionizing operations and
                     creating new opportunities across various sectors.
                 </p>
@@ -551,7 +561,7 @@ const page = () => {
                         <h2 className="font-bold ibm">
                             Wall of {" "}<span className="text-[#3756B9] ">Trust </span>
                         </h2>
-                        <p className="w-[59%]  text-center" >
+                        <p className="w-full lg:w-[59%]  text-center" >
                             Our work speaks for itself. Take a look why our clients love team PragetX. They are not just our customers, but they are part of one large extended family.                        </p>
                     </div>
                     <div className="grid lg:grid-cols-3 md:grid-cols-1 gap-[30px] mt-[70px] md:justify-between  w-full items-center place-items-center ">

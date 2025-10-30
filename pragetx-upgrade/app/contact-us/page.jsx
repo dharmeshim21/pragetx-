@@ -12,6 +12,7 @@ import Offices from '@/components/Offices/Offices'
 // const ContactForm = dynamic(() => import('@/components/contact-from/ContactFrom'), { ssr: false });
 import ContactForm from '@/components/contact-from/ContactFrom'
 import Line from "@/public/homescreen/line.png"
+import ProfileCard from '@/components/ProfileCard/ProfileCard'
 
 // export const metadata = {
 //     title: 'Get in Touch for IT Services & Solutions | PragetX',
@@ -120,7 +121,7 @@ const page = () => {
         <>
             {/* <SchemaScript schema={contactusSchema} /> */}
 
-            <section className='contact-us-bg' style={{paddingTop:'70px'}}>
+            <section className='contact-us-bg' style={{ paddingTop: '70px' }}>
                 <div className='container'>
                     <div className="flex  justify-between contact-s1-responsive">
                         <div className="left  lg:my-auto center">
@@ -199,104 +200,7 @@ const page = () => {
                                 </p>
                             </div>
 
-                            <div className="card mt-[70px] w-full flex justify-center px-4">
-                                <div className="mx-auto w-full max-w-[500px] rounded-[20px] my-box bg-[#FFFFFF1A] backdrop-blur-[1px] py-[20px] px-[20px] sm:px-[30px]">
-
-                                    {/* Header */}
-                                    <div className="heading flex flex-col sm:flex-row items-center sm:items-start gap-[20px]">
-                                        <div className="logo flex-shrink-0">
-                                            <Image
-                                                src="/homescreen/avtar.png"
-                                                alt="logo"
-                                                className="rounded-md"
-                                                height={80}
-                                                width={80}
-                                            />
-                                        </div>
-                                        <div className="name text-center sm:text-left">
-                                            <h3
-                                                className="santoshi text-transparent bg-clip-text leading-tight"
-                                                style={{
-                                                    fontSize: 'clamp(24px, 5vw, 38px)',
-                                                    fontWeight: 'bold',
-                                                    backgroundImage:
-                                                        'linear-gradient(90deg, #A856F7 0%, #6A5ACD 50%, #00A1E0 100%)',
-                                                }}
-                                            >
-                                                Mr. Arun Tiwari
-                                            </h3>
-                                            <p
-                                                style={{
-                                                    fontWeight: '500',
-                                                    fontSize: 'clamp(16px, 3vw, 22px)',
-                                                }}
-                                            >
-                                                Head of Business Development
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Contact Info */}
-                                    <div className="info flex flex-col sm:flex-row gap-[10px] sm:gap-[20px] justify-between mt-[30px]">
-                                        {/* Mobile */}
-                                        <div className="mobile w-full sm:w-auto">
-                                            <div
-                                                className="aboutLinem bg-gradient-to-r from-[#A856F7]/7 via-[#6A5ACD]/8 to-[#00A1E0]/8 flex gap-2 mx-auto sm:mx-0 w-fit px-[10px] py-[5px] rounded-full items-center"
-                                                style={{ fontSize: '14px', fontWeight: 400 }}
-                                            >
-                                                <Image
-                                                    src="/homescreen/call.png"
-                                                    alt="Stars"
-                                                    className="rounded-md"
-                                                    height={25}
-                                                    width={25}
-                                                />
-                                                <span
-                                                    className="bg-gradient-to-r from-[#B183F9] via-[#7C6DD6] to-[#33C0F0] bg-clip-text text-transparent"
-                                                    style={{
-                                                        fontSize: 'clamp(14px, 3vw, 18px)',
-                                                        fontWeight: '600',
-                                                    }}
-                                                >
-                                                    +91 7016060783
-                                                </span>
-                                            </div>
-                                        </div>
-
-                                        {/* Email */}
-                                        <div className="email w-full sm:w-auto">
-                                            <div
-                                                className="aboutLinem bg-gradient-to-r from-[#A856F7]/7 via-[#6A5ACD]/8 to-[#00A1E0]/8 flex gap-2 mx-auto sm:mx-0 w-fit px-[10px] py-[5px] rounded-full items-center"
-                                                style={{ fontSize: '14px', fontWeight: 400 }}
-                                            >
-                                                <Image
-                                                    src="/homescreen/sms.png"
-                                                    alt="Stars"
-                                                    className="rounded-md"
-                                                    height={25}
-                                                    width={26}
-                                                />
-                                                <span
-                                                    className="bg-gradient-to-r from-[#B183F9] via-[#7C6DD6] to-[#33C0F0] bg-clip-text text-transparent"
-                                                    style={{
-                                                        fontSize: 'clamp(14px, 3vw, 18px)',
-                                                        fontWeight: '600',
-                                                    }}
-                                                >
-                                                    atiwari@pragetx.com
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Button */}
-                                    <div className="btn">
-                                        <Button className="h-[45px] w-full mt-[30px] rounded-full font-medium text-white bg-gradient-to-r from-[#3730A3] to-[#38BDF8] text-[clamp(16px,3vw,20px)] shadow-none active:scale-100">
-                                            Talk to an Expert
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
+                            <ProfileCard/>
 
 
                             <div className="qute mt-[50px] lg:mx-[25%] flex flex-col items-center ">

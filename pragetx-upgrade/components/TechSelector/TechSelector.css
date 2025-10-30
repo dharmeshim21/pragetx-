@@ -144,3 +144,12 @@
 .details-wrapper.collapsed .details-inner-content {
   padding-top: 0;
 }
+
+
+
+@media only screen and (max-width:714px) {
+  .tech-selector-container{
+    padding: 20px 20px;
+  }
+
+}

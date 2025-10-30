@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@heroui/button";
 import AnimationWrapper from '../AnimationWrapper/AnimationWrapper';
+import Chip from '../Chip/Chip'
 
 const SuccessComp = ({ hide = true, swap = false, isTitle = false }) => {
   const ReadAllButton = () => (
@@ -60,12 +61,11 @@ const SuccessComp = ({ hide = true, swap = false, isTitle = false }) => {
           <div className="w-full lg:w-5/12 self-center px-2 sm:px-0">
             <AnimationWrapper direction="left">
               {/* Category Tag */}
-              <div className="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full text-[#A856F7] bg-[linear-gradient(90deg,rgba(168,86,247,0.1)_-24.16%,rgba(106,90,205,0.1)_51.18%,rgba(0,161,224,0.1)_126.53%)] mb-3 sm:mb-4">
-                <h4 className="mr-1 font-bold">✨</h4> Logistics & Supply Chain
-              </div>
+                 <Chip title={"Logistics & Supply Chain"} position={"start"}  className='lg:!mx-0 mb-2 mx-auto'/>
+
 
               {/* Logo & Title */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6 text-center sm:text-left mt-[5px] lg:m-[0px]">
                 <Image
                   className="mr-0 sm:mr-4 mb-3 sm:mb-0"
                   src="/homescreen/homeCard/success.png"
@@ -73,7 +73,7 @@ const SuccessComp = ({ hide = true, swap = false, isTitle = false }) => {
                   width={80}
                   height={80}
                 />
-                <h3 className="font-bold text-[#1E293B] text-[28px] sm:text-[32px] md:text-[40px] leading-tight">
+                <h3 className="font-bold text-[#1E293B] !sm:text-[32px] !md:text-[40px] leading-tight my-auto ">
                   SwiftLogix Smart Logistics{" "}
                   <span className="text-[#3730A3]">Automation</span>
                 </h3>

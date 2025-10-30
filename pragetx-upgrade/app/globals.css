@@ -130,7 +130,7 @@ h2 {
 }
 
 h3 {
-  font-size: 23px;
+  font-size: 32px;
   font-weight: 200px;
 }
 
@@ -188,6 +188,7 @@ p {
   background-repeat: no-repeat;
   z-index: 0;
 }
+
 .education-bg {
   position: relative;
   background: url(/images/education-bg.gif);
@@ -196,6 +197,7 @@ p {
   background-repeat: no-repeat;
   z-index: 0;
 }
+
 /* Add dark overlay */
 .contact-us-bg::before {
   content: "";
@@ -225,7 +227,7 @@ p {
   /* <- Move it below content */
 }
 
-.about-us-bg>* ,
+.about-us-bg>*,
 .ai-services-bg>*,
 .education-bg>* {
   position: relative;
@@ -234,6 +236,18 @@ p {
   color: white;
   /* Force white text */
 }
+
+/* Fix for Atropos blocking clicks */
+.atropos-inner,
+.atropos-scale,
+.atropos-rotate {
+  pointer-events: none !important;
+}
+
+.atropos-inner * {
+  pointer-events: auto !important;
+}
+
 
 /* Styles for the scrollbar on WebKit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
@@ -482,7 +496,7 @@ ul[role="menu"][data-focus-visible="true"],
   h1 {
     font-size: 65px;
     line-height: 80px;
-    
+
   }
 
   h2 {

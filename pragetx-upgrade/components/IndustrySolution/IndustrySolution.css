@@ -1,0 +1,12 @@
+.option-container {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:1244px) {
+    .option-container {
+        display: none;
+    }
+}

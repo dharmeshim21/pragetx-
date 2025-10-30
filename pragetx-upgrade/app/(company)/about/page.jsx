@@ -21,6 +21,7 @@ import WorkLifeSlider from "@/components/WorkLife/WorkLifeSlider";
 import AnimationWrapper from "@/components/AnimationWrapper/AnimationWrapper";
 import TeamWork from "@/components/TeamWork/TeamWork";
 import LetsTalk from "@/components/Lets Talk/LetsTalk";
+import TopSlider from "@/components/TopSlider/TopSlider";
 // import TeamWork from "/path/to/image.jpg";
 
 const WorkInServicesData = [
@@ -160,35 +161,14 @@ const About = () => {
             <SchemaScript schema={aboutSchema} />
 
             <section className="flex items-center justify-center about-us-bg min-h-screen">
-                <div className="container text-white flex flex-col items-center justify-between">
-                    <div
-                        className="aboutLinem flex items-center justify-center 2xl:gap-2 gap-1 px-3 py-[5px] rounded-full"
-                        style={{
-                            fontSize: "14px",
-                            fontWeight: 500,
-                            background:
-                                "linear-gradient(90deg, rgba(168, 86, 247, 0.5) 0%, rgba(106, 90, 205, 0.5) 50%, rgba(0, 161, 224, 0.5) 100%)",
-                        }}
-                    >
-                        {/* For the white star use stars1 and for gradient star use stars */}
-                        <Image
-                            src="/homescreen/stars1.png"
-                            alt="Stars"
-                            className="rounded-md w-[15px] h-[20px] sm:w-[18px] sm:h-[23px] md:w-[20px] md:h-[25px] transition-all duration-300"
-                            height={30}
-                            width={30}
-                        />
-                        <span
-                            className="text-white text-[14px] sm:text-[15px] font-medium leading-tight text-center"
-                        >
-                            A visionary & upcoming leading software development company based in India
-                        </span>
-                    </div>
-
-                    <h1 className="font-[700] text-center text-[50px] leading-[100%] tracking-normal mt-[33px] ibm">A Dedicated, Agile Team of Developers At Your Service</h1>
-                    <p className="font-[500] text-center text-[16px] leading-5 tracking-normal mt-[35px] px-8" style={{ color: 'white' }}>PragetX is an extended team of experienced software developers who are on a mission to help businesses in their digital transformation journey through dedication and the latest technology support.</p>
-                    <Button radius="full" type="button" className="bg-custom-gradient mt-[36px] py-2.5 px-[30px] font-[500]  text-xl leading-[100%] tracking-[0.2px]">Talk to Our Consultant</Button>
-                </div>
+                <TopSlider
+                    mainSubtitle="A visionary & upcoming leading software development company based in India"
+                    title="A Dedicated, Agile Team of Developers"
+                    titleBreak="At Your"
+                    gradientText="Service"
+                    subtitle="PragetX is an extended team of experienced software developers who are on a mission to help businesses in their digital transformation journey through dedication and the latest technology support."
+                    button="Talk To Our Consultant"
+                />
             </section>
 
             <section>

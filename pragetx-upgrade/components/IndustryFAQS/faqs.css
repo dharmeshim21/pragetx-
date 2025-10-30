@@ -1,0 +1,12 @@
+.faqs-content section {
+    padding: 0px !important;
+}
+
+.faqs-content-data h2 button{
+    padding: 0;
+}
+
+.faqs-content-data h2 svg{
+    width: 25px;
+    height: 25px;
+}

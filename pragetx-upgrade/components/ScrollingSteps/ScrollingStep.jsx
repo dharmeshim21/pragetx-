@@ -168,7 +168,7 @@ const ScrollingStep = () => {
     // Helper component for the list item (unchanged)
     const ListItem = ({ children }) => (
         <li className="flex items-center gap-[15px]">
-            <Image src="/images/doneImg.png" alt="done" width={18} height={18} />
+            <Image src="/images/doneImg.png" alt="done" width={18} height={18} style={{height:'18px'}} />
             <h6 className="text-[16px] font-medium">{children}</h6>
         </li>
     );
